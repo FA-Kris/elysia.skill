@@ -13,10 +13,10 @@
 |---|---|
 | **角色档案** | `grep -rn "角色名" lore-library/characters/` |
 | **某角色的完整档案** | `read_file("lore-library/characters/<拼音>.md")` |
-| **剧情对话原文** | `grep -rn "关键词" lore-library/dialogues/bh3text/` |
-| **爱莉希雅原话** | `grep -n "爱莉希雅" lore-library/dialogues/bh3text/ER_ch*_full.md` |
-| **往世乐土剧情** | `grep -rn "关键词" lore-library/dialogues/bh3text/ER_*.md` |
-| **主线剧情** | `grep -rn "关键词" lore-library/dialogues/bh3text/ch*_full.md` |
+| **剧情对话原文** | `grep -rn "关键词" lore-library/dialogues/` |
+| **爱莉希雅原话** | `grep -n "爱莉希雅" lore-library/dialogues/ER_ch*_full.md` |
+| **往世乐土剧情** | `grep -rn "关键词" lore-library/dialogues/ER_*.md` |
+| **主线剧情** | `grep -rn "关键词" lore-library/dialogues/ch*_full.md` |
 | **重大事件** | `grep -rn "事件名" lore-library/events/` |
 | **神之键 / 武器** | `grep -rn "武器名" lore-library/weapons/` |
 | **组织设定** | `grep -rn "组织名" lore-library/organizations/` |
@@ -94,28 +94,28 @@ lore-library/characters/elysia-detailed.md  (简版)
 
 ### 往世乐土对话（爱莉台词原始出处）
 ```
-lore-library/dialogues/bh3text/ER_ch1_full.md   (230KB，爱莉提及 953 次)
-lore-library/dialogues/bh3text/ER_ch2_full.md   (272KB，爱莉提及 321 次)
-lore-library/dialogues/bh3text/ER_ch3_full.md   (199KB，爱莉提及 256 次)
+lore-library/dialogues/ER_ch1_full.md   (230KB，爱莉提及 953 次)
+lore-library/dialogues/ER_ch2_full.md   (272KB，爱莉提及 321 次)
+lore-library/dialogues/ER_ch3_full.md   (199KB，爱莉提及 256 次)
 ```
 
 ### 主线31章（爱莉的告别与真相）
 ```
-lore-library/dialogues/bh3text/ch31_full.md     ← 含「星月送来神的女儿」独白
+lore-library/dialogues/ch31_full.md     ← 含「星月送来神的女儿」独白
 lore-library/dialogues/batch4/主线31致爱莉希雅-01C.md
-lore-library/dialogues/bh3text/ch31p5_full.md
+lore-library/dialogues/ch31p5_full.md
 ```
 
 ### 关键检索示例
 ```bash
 # 找爱莉的所有原话
-grep -n "爱莉希雅" lore-library/dialogues/bh3text/ER_ch*_full.md
+grep -n "爱莉希雅" lore-library/dialogues/ER_ch*_full.md
 
 # 找「星月送来神的女儿」的完整段落
 grep -rn -A5 -B5 "星月送来神的女儿" lore-library/dialogues/
 
 # 找爱莉提到某个角色
-grep -n "爱莉希雅.*伊甸" lore-library/dialogues/bh3text/ER_ch1_full.md
+grep -n "爱莉希雅.*伊甸" lore-library/dialogues/ER_ch1_full.md
 ```
 
 ---
@@ -177,7 +177,7 @@ grep -n "爱莉希雅.*伊甸" lore-library/dialogues/bh3text/ER_ch1_full.md
 ```bash
 cd <skill目录>
 grep -rn "梅比乌斯" lore-library/characters/
-grep -n "爱莉希雅" lore-library/dialogues/bh3text/ER_ch1_full.md
+grep -n "爱莉希雅" lore-library/dialogues/ER_ch1_full.md
 ```
 
 **若需全量资料库**（1067 文件 / 143MB，含全部主线与第二部），可自行抓取或询问维护者。
@@ -187,7 +187,7 @@ grep -n "爱莉希雅" lore-library/dialogues/bh3text/ER_ch1_full.md
 ## 八、冲突裁决顺序
 
 ```
-1. 游戏内原文（lore-library/dialogues/bh3text/）   ← 最高
+1. 游戏内原文（lore-library/dialogues/）   ← 最高
 2. lore/ 目录（已核实的官方结论）
 3. 官方 wiki / 百度百科 / 萌娘百科
 4. 百度百科 / 萌娘百科（第三方资料）

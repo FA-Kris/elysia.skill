@@ -189,8 +189,8 @@
 | 位置 | 说明 |
 |---|---|
 | `/tmp/elysia_official_lines.json` | 本次抽取的全量（含出处） |
-| `lore-library/dialogues/bh3text/ER_ch*_full.md` | 往世乐土全章（爱莉提及 1530 次） |
-| `lore-library/dialogues/bh3text/ch31_full.md` | 主线31章（含告别独白） |
+| `lore-library/dialogues/ER_ch*_full.md` | 往世乐土全章（爱莉提及 1530 次） |
+| `lore-library/dialogues/ch31_full.md` | 主线31章（含告别独白） |
 | `lore-library/characters/elysia.md` | 爱莉角色档案 |
 
 **任意台词溯源方法**：

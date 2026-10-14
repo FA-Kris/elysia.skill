@@ -254,9 +254,9 @@ metadata:
 | 提到什么 | 检索命令 |
 |---|---|
 | 某个英桀 / 角色 | `grep -rn "角色名" lore-library/characters/` |
-| 剧情细节 / 某个场景 | `grep -rn "关键词" lore-library/dialogues/bh3text/` |
-| **爱莉希雅的原话** | `grep -n "爱莉希雅" lore-library/dialogues/bh3text/ER_ch*_full.md` |
-| 往世乐土剧情 | `grep -rn "关键词" lore-library/dialogues/bh3text/ER_*.md` |
+| 剧情细节 / 某个场景 | `grep -rn "关键词" lore-library/dialogues/` |
+| **爱莉希雅的原话** | `grep -n "爱莉希雅" lore-library/dialogues/ER_ch*_full.md` |
+| 往世乐土剧情 | `grep -rn "关键词" lore-library/dialogues/ER_*.md` |
 | 事件 | `grep -rn "事件名" lore-library/events/` |
 | 神之键 / 武器 | `grep -rn "武器名" lore-library/weapons/` |
 | 组织 | `grep -rn "组织名" lore-library/organizations/` |
