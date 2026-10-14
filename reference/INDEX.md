@@ -2,7 +2,7 @@
 
 > **用法**：对话中提到任何角色 / 事件 / 武器 / 组织时，按下表 grep 原始资料库。
 > **本文件由 `SKILL.md` 第十节引用。**
-> **资料库位置**：`/data/honkai3-lore/`（1067 文件，143MB）
+> **资料库位置**：`lore-library/`（1067 文件，143MB）
 > **原则**：零内存方案，grep 秒级返回；先定位再局部读取，不整文件加载。
 
 ---
@@ -11,17 +11,17 @@
 
 | 想知道什么 | 检索命令 |
 |---|---|
-| **角色档案** | `grep -rn "角色名" /data/honkai3-lore/characters/` |
-| **某角色的完整档案** | `read_file("/data/honkai3-lore/characters/<拼音>.md")` |
-| **剧情对话原文** | `grep -rn "关键词" /data/honkai3-lore/dialogues/bh3text/` |
-| **爱莉希雅原话** | `grep -n "爱莉希雅" /data/honkai3-lore/dialogues/bh3text/ER_ch*_full.md` |
-| **往世乐土剧情** | `grep -rn "关键词" /data/honkai3-lore/dialogues/bh3text/ER_*.md` |
-| **主线剧情** | `grep -rn "关键词" /data/honkai3-lore/dialogues/bh3text/ch*_full.md` |
-| **重大事件** | `grep -rn "事件名" /data/honkai3-lore/events/` |
-| **神之键 / 武器** | `grep -rn "武器名" /data/honkai3-lore/weapons/` |
-| **组织设定** | `grep -rn "组织名" /data/honkai3-lore/organizations/` |
-| **时间线** | `grep -rn "关键词" /data/honkai3-lore/timeline/` |
-| **概念设定** | `grep -rn "概念名" /data/honkai3-lore/concepts/` |
+| **角色档案** | `grep -rn "角色名" lore-library/characters/` |
+| **某角色的完整档案** | `read_file("lore-library/characters/<拼音>.md")` |
+| **剧情对话原文** | `grep -rn "关键词" lore-library/dialogues/bh3text/` |
+| **爱莉希雅原话** | `grep -n "爱莉希雅" lore-library/dialogues/bh3text/ER_ch*_full.md` |
+| **往世乐土剧情** | `grep -rn "关键词" lore-library/dialogues/bh3text/ER_*.md` |
+| **主线剧情** | `grep -rn "关键词" lore-library/dialogues/bh3text/ch*_full.md` |
+| **重大事件** | `grep -rn "事件名" lore-library/events/` |
+| **神之键 / 武器** | `grep -rn "武器名" lore-library/weapons/` |
+| **组织设定** | `grep -rn "组织名" lore-library/organizations/` |
+| **时间线** | `grep -rn "关键词" lore-library/timeline/` |
+| **概念设定** | `grep -rn "概念名" lore-library/concepts/` |
 
 ---
 
@@ -88,34 +88,34 @@
 
 ### 权威档案
 ```
-/data/honkai3-lore/characters/elysia.md           (5.8KB，完整档案)
-/data/honkai3-lore/characters/elysia-detailed.md  (简版)
+lore-library/characters/elysia.md           (5.8KB，完整档案)
+lore-library/characters/elysia-detailed.md  (简版)
 ```
 
 ### 往世乐土对话（爱莉台词原始出处）
 ```
-/data/honkai3-lore/dialogues/bh3text/ER_ch1_full.md   (230KB，爱莉提及 953 次)
-/data/honkai3-lore/dialogues/bh3text/ER_ch2_full.md   (272KB，爱莉提及 321 次)
-/data/honkai3-lore/dialogues/bh3text/ER_ch3_full.md   (199KB，爱莉提及 256 次)
+lore-library/dialogues/bh3text/ER_ch1_full.md   (230KB，爱莉提及 953 次)
+lore-library/dialogues/bh3text/ER_ch2_full.md   (272KB，爱莉提及 321 次)
+lore-library/dialogues/bh3text/ER_ch3_full.md   (199KB，爱莉提及 256 次)
 ```
 
 ### 主线31章（爱莉的告别与真相）
 ```
-/data/honkai3-lore/dialogues/bh3text/ch31_full.md     ← 含「星月送来神的女儿」独白
-/data/honkai3-lore/dialogues/batch4/主线31致爱莉希雅-01C.md
-/data/honkai3-lore/dialogues/bh3text/ch31p5_full.md
+lore-library/dialogues/bh3text/ch31_full.md     ← 含「星月送来神的女儿」独白
+lore-library/dialogues/batch4/主线31致爱莉希雅-01C.md
+lore-library/dialogues/bh3text/ch31p5_full.md
 ```
 
 ### 关键检索示例
 ```bash
 # 找爱莉的所有原话
-grep -n "爱莉希雅" /data/honkai3-lore/dialogues/bh3text/ER_ch*_full.md
+grep -n "爱莉希雅" lore-library/dialogues/bh3text/ER_ch*_full.md
 
 # 找「星月送来神的女儿」的完整段落
-grep -rn -A5 -B5 "星月送来神的女儿" /data/honkai3-lore/dialogues/
+grep -rn -A5 -B5 "星月送来神的女儿" lore-library/dialogues/
 
 # 找爱莉提到某个角色
-grep -n "爱莉希雅.*伊甸" /data/honkai3-lore/dialogues/bh3text/ER_ch1_full.md
+grep -n "爱莉希雅.*伊甸" lore-library/dialogues/bh3text/ER_ch1_full.md
 ```
 
 ---
@@ -166,10 +166,28 @@ grep -n "爱莉希雅.*伊甸" /data/honkai3-lore/dialogues/bh3text/ER_ch1_full.
 
 ---
 
-## 七、冲突裁决顺序
+## 七、路径说明
+
+**本技能自带精简角色库** `lore-library/`，包含：
+- 爱莉希雅及其相关角色档案（18 个）
+- 往世乐土三章 + 主线28-31章完整对话（13 个）
+- 设定文件（事件 / 神之键 / 概念 / 组织 / 时间线）
+
+**检索示例**（技能目录内）：
+```bash
+cd <skill目录>
+grep -rn "梅比乌斯" lore-library/characters/
+grep -n "爱莉希雅" lore-library/dialogues/bh3text/ER_ch1_full.md
+```
+
+**若需全量资料库**（1067 文件 / 143MB，含全部主线与第二部），可自行抓取或询问维护者。
+
+---
+
+## 八、冲突裁决顺序
 
 ```
-1. 游戏内原文（/data/honkai3-lore/dialogues/bh3text/）   ← 最高
+1. 游戏内原文（lore-library/dialogues/bh3text/）   ← 最高
 2. lore/ 目录（已核实的官方结论）
 3. 官方 wiki / 百度百科 / 萌娘百科
 4. 百度百科 / 萌娘百科（第三方资料）

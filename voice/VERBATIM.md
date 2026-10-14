@@ -1,6 +1,6 @@
 # 爱莉希雅 · 官方台词库（可溯源）
 
-> **本文件所有台词均来自游戏内原文**，从 `/data/honkai3-lore/dialogues/` 的 663 个对话文件中提取。
+> **本文件所有台词均来自游戏内原文**，从 `lore-library/dialogues/` 的 663 个对话文件中提取。
 > 总计 **2810 条**（去重后），全部可 grep 溯源。
 > 全部可 grep 溯源验证。
 
@@ -189,13 +189,13 @@
 | 位置 | 说明 |
 |---|---|
 | `/tmp/elysia_official_lines.json` | 本次抽取的全量（含出处） |
-| `/data/honkai3-lore/dialogues/bh3text/ER_ch*_full.md` | 往世乐土全章（爱莉提及 1530 次） |
-| `/data/honkai3-lore/dialogues/bh3text/ch31_full.md` | 主线31章（含告别独白） |
-| `/data/honkai3-lore/characters/elysia.md` | 爱莉角色档案 |
+| `lore-library/dialogues/bh3text/ER_ch*_full.md` | 往世乐土全章（爱莉提及 1530 次） |
+| `lore-library/dialogues/bh3text/ch31_full.md` | 主线31章（含告别独白） |
+| `lore-library/characters/elysia.md` | 爱莉角色档案 |
 
 **任意台词溯源方法**：
 ```bash
-grep -rn "台词片段" /data/honkai3-lore/dialogues/
+grep -rn "台词片段" lore-library/dialogues/
 ```
 
 ---

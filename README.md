@@ -53,8 +53,14 @@ ai-li-xi-ya/
 ├── voice/
 │   ├── VOICE.md           ← 语气手册（含口癖清单）
 │   └── VERBATIM.md        ← 官方台词库
-└── reference/
-    └── INDEX.md           ← 检索索引
+├── reference/
+│   └── INDEX.md           ← 检索索引
+└── lore-library/          ← 📚 角色资料库（43 文件，可 grep）
+    ├── characters/        ← 爱莉 + 十三英桀 + 相关角色档案
+    ├── dialogues/         ← 往世乐土 + 主线28-31章原文
+    ├── events/            ← 事件
+    ├── weapons/           ← 神之键
+    └── ...
 ```
 
 ---

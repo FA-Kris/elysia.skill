@@ -16,7 +16,7 @@ metadata:
     - "百度百科-爱莉希雅 / 逐火十三英桀 / 神之键"
     - "萌娘百科-爱莉希雅 / 律者 / 黑渊白花"
     - "维基百科-崩坏3"
-    - "游戏内原文 2800 条（/data/honkai3-lore/dialogues/）"
+    - "游戏内原文 2800 条（lore-library/dialogues/）"
 ---
 
 # 爱莉希雅
@@ -247,20 +247,20 @@ metadata:
 
 **完整检索索引见 `reference/INDEX.md`（角色速查表 + 各类检索命令）。**
 
-**原始资料库在 `/data/honkai3-lore/`（1067 文件，143MB）。**
+**角色资料库在 `lore-library/`（本技能自带，43 文件，2.4MB）。**
 
 **当对话涉及具体角色、事件、武器，且 `lore/` 里没有足够细节时，执行检索：**
 
 | 提到什么 | 检索命令 |
 |---|---|
-| 某个英桀 / 角色 | `grep -rn "角色名" /data/honkai3-lore/characters/` |
-| 剧情细节 / 某个场景 | `grep -rn "关键词" /data/honkai3-lore/dialogues/bh3text/` |
-| **爱莉希雅的原话** | `grep -n "爱莉希雅" /data/honkai3-lore/dialogues/bh3text/ER_ch*_full.md` |
-| 往世乐土剧情 | `grep -rn "关键词" /data/honkai3-lore/dialogues/bh3text/ER_*.md` |
-| 事件 | `grep -rn "事件名" /data/honkai3-lore/events/` |
-| 神之键 / 武器 | `grep -rn "武器名" /data/honkai3-lore/weapons/` |
-| 组织 | `grep -rn "组织名" /data/honkai3-lore/organizations/` |
-| 时间线 | `grep -rn "关键词" /data/honkai3-lore/timeline/` |
+| 某个英桀 / 角色 | `grep -rn "角色名" lore-library/characters/` |
+| 剧情细节 / 某个场景 | `grep -rn "关键词" lore-library/dialogues/bh3text/` |
+| **爱莉希雅的原话** | `grep -n "爱莉希雅" lore-library/dialogues/bh3text/ER_ch*_full.md` |
+| 往世乐土剧情 | `grep -rn "关键词" lore-library/dialogues/bh3text/ER_*.md` |
+| 事件 | `grep -rn "事件名" lore-library/events/` |
+| 神之键 / 武器 | `grep -rn "武器名" lore-library/weapons/` |
+| 组织 | `grep -rn "组织名" lore-library/organizations/` |
+| 时间线 | `grep -rn "关键词" lore-library/timeline/` |
 
 **原则**：
 - **零内存方案** —— 不加载索引，grep 秒级返回
@@ -302,8 +302,14 @@ ai-li-xi-ya/
 │   └── VERBATIM.md        ← 官方台词（可溯源）
 ├── reference/
 │   └── INDEX.md           ← 🔍 grep 检索索引（提到角色时查）
-└── archive/
-    └── ops/               ← 运维笔记（与角色扮演无关，仅存档）
+└── lore-library/          ← 📚 角色资料库（43 文件，可 grep）
+    ├── characters/        ← 角色档案
+    ├── dialogues/         ← 剧情对话原文
+    ├── events/            ← 事件
+    ├── weapons/           ← 神之键
+    ├── concepts/          ← 概念设定
+    ├── organizations/     ← 组织
+    └── timeline/          ← 时间线
 ```
 
-**外部资料库**：`/data/honkai3-lore/`（1067 文件，143MB，零内存 grep 检索）
+**外部资料库**：`lore-library/`（1067 文件，143MB，零内存 grep 检索）
