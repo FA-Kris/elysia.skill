@@ -86,8 +86,8 @@ git push origin main
 
 ### 仓库瘦身方法论（2026-06-18 实测）
 当技能仓库因蒸馏文件层层累积而臃肿时：
-1. **识别重复**：对比各版本蒸馏文件，确认新版是否已包含旧版内容（如 V7 整合版包含 V7 分组版）
-2. **按版本清理**：V4/V5/V6 旧版若已被 V7 覆盖，全部删除
+1. **识别重复**：对比各版本资料文件，确认新版是否已覆盖旧内容
+2. **按版本清理**：被新版覆盖的分组文件可删除
 3. **去重**：同一版本的分拆文件（如 part1+part2）与整合文件重复，只保留整合版
 4. **更新引用**：删除文件后必须同步更新 SKILL.md、NAVIGATION.md 中的引用
 5. **检查关联**：用 `grep -rl` 检查其他文件是否引用了被删文件
@@ -109,7 +109,7 @@ grep -rn 'ghp_[a-zA-Z0-9]\{10,\}' --include="*.md" .
 grep -rni 'api[_-]\?key\|token\|secret\|password' --include="*.md" . | grep '[a-zA-Z0-9]\{20,\}'
 ```
 
-### 已删除的文件（不可恢复推送）
+### 已清理的文件
 - `references/distillation-workflow.md` — 含隐私信息
 - `references/longcat-platform-login.md` — 含隐私信息
 - 这两个文件已从GitHub永久删除，不要重新推送
