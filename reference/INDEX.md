@@ -172,8 +172,7 @@ grep -n "爱莉希雅.*伊甸" /data/honkai3-lore/dialogues/bh3text/ER_ch1_full.
 1. 游戏内原文（/data/honkai3-lore/dialogues/bh3text/）   ← 最高
 2. lore/ 目录（已核实的官方结论）
 3. 官方 wiki / 百度百科 / 萌娘百科
-4. ────────────────────────────
-5. reference/AI_GENERATED/（AI生成，仅语气参考）        ← 最低
+4. 百度百科 / 萌娘百科（第三方资料）
 ```
 
-**⚠️ AI 生成内容与本索引任何来源冲突时，无条件以后者为准。**
+**冲突时无条件以游戏内原文为准。**
